@@ -800,7 +800,7 @@ name (e.g. `data' variable passed as `data' parameter)."
      (f-exists? (lsp-clients-typescript-project-ts-server-path)))
     (lsp-clients-typescript-project-ts-server-path))
    (t
-    (f-join (f-parent (lsp-package-path 'typescript)) "node_modules" "typescript" "lib"))))
+    (lsp-package-path 'typescript))))
 
 (lsp-register-client
  (make-lsp-client :new-connection (lsp-stdio-connection (lambda ()
